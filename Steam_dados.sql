@@ -30,3 +30,8 @@ select generos, count(generos) as Quantidade from steam_dados
 group by generos
 order by Quantidade desc;
 
+SELECT month(data_lancamento) as 'Mês_Lançamento',COUNT(*) as 'Quantidade_Jogos_Lançados'
+FROM steam_dados
+GROUP BY month(data_lancamento) 
+ORDER BY COUNT(*) DESC;
+
